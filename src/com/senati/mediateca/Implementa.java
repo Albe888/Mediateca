@@ -8,7 +8,7 @@ public class Implementa {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//añadir nuevos socios
+		//aÃ±adir nuevos socios
 		//clase objeto =new class()
 		Socio socio1=new Socio();
 		socio1.id=100;
@@ -32,7 +32,7 @@ public class Implementa {
 		
 		///cintadeaudio
 		
-		Cintaaudio cintaaudio1=new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+		Cintaaudio cintaaudio1=new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
 		System.out.println(cintaaudio1.toString());
 		
 		Cintaaudio cintaaudio2=new Cintaaudio(435435,"La ciudad de los perros", 120, "Mario Vargas Llosa"," Pro", 10);
@@ -93,11 +93,11 @@ public class Implementa {
         ///cinta audio
         
         System.out.println("lista de audio");
-        Cintaaudio aud1 = new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
-        Cintaaudio aud2 = new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
-        Cintaaudio aud3 = new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
-        Cintaaudio aud4 = new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
-        Cintaaudio aud5 = new Cintaaudio(12345," La niña de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+        Cintaaudio aud1 = new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+        Cintaaudio aud2 = new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+        Cintaaudio aud3 = new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+        Cintaaudio aud4 = new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
+        Cintaaudio aud5 = new Cintaaudio(12345," La niÃ±a de la lampara azul", 120, "Jose Maria Eguren"," Pro", 10);
 		
         Set <Cintaaudio> Cintaaudioinscritos = new HashSet<Cintaaudio>();
         
@@ -132,10 +132,19 @@ public class Implementa {
         Librosinscritos.add(li4);
         Librosinscritos.add(li5);
         
-        for (Libros Libros: Librosinscritos) {
+        byte contador=0;
+        float preciototal=0f;
+		
+        	for (Libros Libros: Librosinscritos) {
         	System.out.println(Libros.id+""+Libros.titulo +""+Libros.precio+""+Libros.autor+""+Libros.nropag+"");
+        	contador++;
+        	preciototal=preciototal+Libros.precio;
+        	
+        }
+        System.out.println("Libros prestados"+ contador);
+        System.out.println("Monto acumulado"+ preciototal);
+        
         }
         
 	}
 
-}
